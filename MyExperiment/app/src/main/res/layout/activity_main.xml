@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/drag_floating_action_button"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:text="Drag Floating Action Button"/>
+
+    <Button
+        android:id="@+id/recycler_view"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:text="RecyclerView"/>
+
+
+    <Button
+        android:id="@+id/card_view"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:text="CardView"/>
+
+    <Button
+        android:id="@+id/grid_layout_add_view"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:text="Add View in GridLayout"/>
+
+    <Button
+        android:id="@+id/get_compound_drawables"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:text="Test getCompoundDrawables()"/>
+
+    <Button
+        android:id="@+id/notification"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:text="Notification"/>
+
+</LinearLayout>
