@@ -45,4 +45,10 @@
         android:layout_height="40dp"
         android:text="Notification"/>
 
+    <Button
+        android:id="@+id/circleImageView"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:text="CircleImageView"/>
+
 </LinearLayout>

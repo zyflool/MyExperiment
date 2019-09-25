@@ -8,6 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myexperiment.CardView.CardViewActivity;
+import com.example.myexperiment.CircleImageView.CircleImageViewActivity;
 import com.example.myexperiment.DragFloatingActionButton.DragFloatingActionButtonActivity;
 import com.example.myexperiment.GridLayout.GridLayoutActivity;
 import com.example.myexperiment.Notification.NotificationActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mGridLayout;
     private Button mTextView;
     private Button mNotification;
+    private Button mCircleImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mGridLayout = findViewById(R.id.grid_layout_add_view);
         mTextView = findViewById(R.id.get_compound_drawables);
         mNotification = findViewById(R.id.notification);
+        mCircleImageView = findViewById(R.id.circleImageView);
 
         mDragFloatingActionButton.setOnClickListener(this);
         mRecyclerView.setOnClickListener(this);
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mGridLayout.setOnClickListener(this);
         mTextView.setOnClickListener(this);
         mNotification.setOnClickListener(this);
+        mCircleImageView.setOnClickListener(this);
     }
 
     public void onClick( View view ) {
@@ -68,9 +72,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.get_compound_drawables:
                 intent = new Intent(MainActivity.this, GetCompoundDrawablesActivity.class);
                 startActivity(intent);
+                break;
             case R.id.notification:
                 intent = new Intent(MainActivity.this, NotificationActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.circleImageView:
+                intent = new Intent(MainActivity.this, CircleImageViewActivity.class);
+                startActivity(intent);
+                break;
         }
 
     }

@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Notification.NotificationActivity"></activity>
+        <activity android:name=".CircleImageView.CircleImageViewActivity"></activity>
+        <activity android:name=".Notification.NotificationActivity" />
         <activity android:name=".GridLayout.GridLayoutActivity" />
         <activity android:name=".getCompoundDrawables.GetCompoundDrawablesActivity" />
-        <activity android:name=".RecyclerView.RecyclerViewActivity"/>
+        <activity android:name=".RecyclerView.RecyclerViewActivity" />
         <activity android:name=".DragFloatingActionButton.DragFloatingActionButtonActivity" />
         <activity android:name=".CardView.CardViewActivity" />
         <activity android:name=".MainActivity">
