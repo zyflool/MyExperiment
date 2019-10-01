@@ -21,6 +21,7 @@ public class CrimeListFragment extends Fragment {
 
     private RecyclerView mCrimeRecyclerView;
     private CrimeAdapter mAdapter;
+    private int opened = -1;
 
     @Nullable
     @Override
@@ -35,11 +36,21 @@ public class CrimeListFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateUI();
+    }
+
     private void updateUI() {
         CrimeLab crimeLab = CrimeLab.get(getActivity());
         List<Crime> crimes = crimeLab.getCrimes();
-        mAdapter = new CrimeAdapter(crimes);
-        mCrimeRecyclerView.setAdapter(mAdapter);
+
+        if ( mAdapter == null ) {
+            mAdapter = new CrimeAdapter(crimes);
+            mCrimeRecyclerView.setAdapter(mAdapter);
+        } else
+            mAdapter.notifyItemChanged(opened);
     }
 
     
@@ -95,6 +106,8 @@ public class CrimeListFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
+                CrimeLab mCrimeLab = CrimeLab.get(getActivity());
+                opened = mCrimeLab.getCrimeIndex(mCrime);
                 Intent intent = CrimeActivity.newIntent(getActivity(), mCrime.getId());
                 startActivity(intent);
             }
