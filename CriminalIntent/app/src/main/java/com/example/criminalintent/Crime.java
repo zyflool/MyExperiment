@@ -14,6 +14,10 @@ public class Crime {
         mDate = new Date();
     }
 
+    public void setId(UUID id) {
+        mId = id;
+    }
+
     public UUID getId() {
         return mId;
     }
@@ -28,6 +32,10 @@ public class Crime {
 
     public Date getDate() {
         return mDate;
+    }
+
+    public void setDate(Date date) {
+        mDate = date;
     }
 
     public boolean isSolved() {
