@@ -13,6 +13,7 @@ import com.example.myexperiment.DragFloatingActionButton.DragFloatingActionButto
 import com.example.myexperiment.GridLayout.GridLayoutActivity;
 import com.example.myexperiment.Notification.NotificationActivity;
 import com.example.myexperiment.RecyclerView.RecyclerViewActivity;
+import com.example.myexperiment.RxJavaTest.RxJavaTestActivity;
 import com.example.myexperiment.getCompoundDrawables.GetCompoundDrawablesActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mTextView;
     private Button mNotification;
     private Button mCircleImageView;
+    private Button mRxJavaTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTextView = findViewById(R.id.get_compound_drawables);
         mNotification = findViewById(R.id.notification);
         mCircleImageView = findViewById(R.id.circleImageView);
+        mRxJavaTest = findViewById(R.id.RxJavaTest);
 
         mDragFloatingActionButton.setOnClickListener(this);
         mRecyclerView.setOnClickListener(this);
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTextView.setOnClickListener(this);
         mNotification.setOnClickListener(this);
         mCircleImageView.setOnClickListener(this);
+        mRxJavaTest.setOnClickListener(this);
     }
 
     public void onClick( View view ) {
@@ -79,6 +83,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.circleImageView:
                 intent = new Intent(MainActivity.this, CircleImageViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.RxJavaTest:
+                intent = new Intent(MainActivity.this, RxJavaTestActivity.class);
                 startActivity(intent);
                 break;
         }
