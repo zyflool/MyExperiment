@@ -134,14 +134,12 @@ public class CrimeListFragment extends Fragment {
         public CrimeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
             return new CrimeHolder(layoutInflater, parent);
-
         }
 
         @Override
         public void onBindViewHolder(@NonNull CrimeHolder holder, int position) {
             Crime crime = mCrimes.get(position);
             holder.bind(crime);
-
         }
 
         @Override
@@ -156,7 +154,6 @@ public class CrimeListFragment extends Fragment {
             private TextView mTitleTextView;
             private TextView mDateTextView;
             private ImageView mSolvedImageView;
-
 
             public CrimeHolder (LayoutInflater inflater, ViewGroup parent){
                 super(inflater.inflate(R.layout.list_item_crime, parent, false));

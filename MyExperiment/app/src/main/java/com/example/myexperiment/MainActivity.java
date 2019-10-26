@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myexperiment.CardView.CardViewActivity;
 import com.example.myexperiment.CircleImageView.CircleImageViewActivity;
 import com.example.myexperiment.DragFloatingActionButton.DragFloatingActionButtonActivity;
+import com.example.myexperiment.FragmentUseTest.FragmentUsingTestActivity;
 import com.example.myexperiment.GridLayout.GridLayoutActivity;
 import com.example.myexperiment.Notification.NotificationActivity;
 import com.example.myexperiment.RecyclerView.RecyclerViewActivity;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mNotification;
     private Button mCircleImageView;
     private Button mRxJavaTest;
+    private Button mFragmentUsingTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mNotification = findViewById(R.id.notification);
         mCircleImageView = findViewById(R.id.circleImageView);
         mRxJavaTest = findViewById(R.id.RxJavaTest);
+        mFragmentUsingTest = findViewById(R.id.FragmentUsingTest);
 
         mDragFloatingActionButton.setOnClickListener(this);
         mRecyclerView.setOnClickListener(this);
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mNotification.setOnClickListener(this);
         mCircleImageView.setOnClickListener(this);
         mRxJavaTest.setOnClickListener(this);
+        mFragmentUsingTest.setOnClickListener(this);
     }
 
     public void onClick( View view ) {
@@ -87,6 +91,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.RxJavaTest:
                 intent = new Intent(MainActivity.this, RxJavaTestActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.FragmentUsingTest:
+                intent = new Intent(MainActivity.this, FragmentUsingTestActivity.class);
                 startActivity(intent);
                 break;
         }
