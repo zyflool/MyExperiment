@@ -4,7 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.criminalintent.CrimeDbSchema.CrimeTable;
+import com.example.criminalintent.database.CrimeDbSchema;
+import com.example.criminalintent.database.CrimeDbSchema.CrimeTable;
 
 public class CrimeBaseHelper extends SQLiteOpenHelper {
     private static final int VERSION = 1;
@@ -21,11 +22,14 @@ public class CrimeBaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //创建crime数据表
         db.execSQL("create table " + CrimeTable.NAME + "(" +
-                " _id integer primary key autoincrement, " +
-                CrimeTable.Cols.UUID + ", " +CrimeTable.Cols.TITLE + ", " +
+                "_id integer primary key autoincrement, " +
+                CrimeTable.Cols.UUID + ", " +
+                CrimeTable.Cols.TITLE + ", " +
                 CrimeTable.Cols.DATE + ", " +
-                CrimeTable.Cols.SOLVED +
-                ")");
+                CrimeTable.Cols.SOLVED + ", " +
+                CrimeTable.Cols.SUSPECT +
+                ")"
+        );
     }
 
     /**
