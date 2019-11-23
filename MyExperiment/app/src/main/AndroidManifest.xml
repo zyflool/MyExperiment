@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FragmentUseTest.FragmentUsingTestActivity"></activity>
+        <activity android:name=".Spinner.SpinnerActivity"></activity>
+        <activity android:name=".TitleBar.TitleBarActivity" />
+        <activity android:name=".calculater.MainActivity" />
+        <activity android:name=".RecyclerViewBackgroundTest.RecyclerViewBackgroundActivity" />
+        <activity android:name=".Animation.AnimationActivity" />
+        <activity android:name=".FloatingViewTest.FloatingViewTestActivity" />
+        <activity android:name=".FragmentUseTest.FragmentUsingTestActivity" />
         <activity android:name=".RxJavaTest.RxJavaTestActivity" />
         <activity android:name=".CircleImageView.CircleImageViewActivity" />
         <activity android:name=".Notification.NotificationActivity" />

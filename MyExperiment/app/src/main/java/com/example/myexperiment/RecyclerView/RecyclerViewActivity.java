@@ -3,6 +3,7 @@ package com.example.myexperiment.RecyclerView;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -16,10 +17,14 @@ import com.example.myexperiment.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 1 react long click to delete with RecyclerView Delete item animation
+ * 2 update following 20 items when move to the bottom
+ */
 public class RecyclerViewActivity extends AppCompatActivity {
 
     private HomeAdapter mHomeAdaper;
-    private List<String> mList = new ArrayList<>();
+    private List<List<String>> mList = new ArrayList<>();
     private RecyclerView mRecyclerView;
 
     @Override
@@ -32,8 +37,15 @@ public class RecyclerViewActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        for (int i = 1; i <= 200 ; i++ )
-            mList.add(i+"");
+        int a = 1;
+        for ( int x = 0 ; x < 10 ; x++ ) {
+            List<String> temp = new ArrayList<>();
+            mList.add(temp);
+            for ( int y = 0 ; y < 20 ; y++ ) {
+                mList.get(x).add(a+"");
+                a++;
+            }
+        }
     }
 
     private void initView() {
@@ -41,10 +53,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         //设置布局管理器
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        /*
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
-        mRecyclerView.addItemDecoration(new DividerGridItemDecoration(this));
-         */
 
         //设置item增加和删除时的动画
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -71,7 +79,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
                         .show();
             }
         });
-
         mRecyclerView.setAdapter(mHomeAdaper);
     }
 }

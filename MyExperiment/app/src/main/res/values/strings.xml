@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MyExperiment</string>
+    <string name="AC">AC</string>
+    <string name="all">全部</string>
+    <string name="product">产品组</string>
+    <string name="design">设计组</string>
+    <string name="frontend">前端组</string>
+    <string name="android">安卓组</string>
+    <string name="backend">后端组</string>
+    <array name="screening">
+        <item>全部</item>
+        <item>产品组</item>
+        <item>设计组</item>
+        <item>前端组</item>
+        <item>安卓组</item>
+        <item>后端组</item>
+    </array>
 </resources>

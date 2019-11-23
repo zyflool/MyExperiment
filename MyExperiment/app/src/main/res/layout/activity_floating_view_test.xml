@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FloatingViewTest.FloatingViewTestActivity">
+
+    <com.example.myexperiment.FloatingViewTest.CustomView_layout
+        android:id="@+id/customview_layout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/holo_red_light"
+        android:visibility="gone"/>
+
+    <com.example.myexperiment.FloatingViewTest.CustomView_offset
+        android:id="@+id/customview_offset"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:background="#345fff"
+        android:visibility="gone"/>
+
+    <com.example.myexperiment.FloatingViewTest.CustomView_LayoutParams
+        android:id="@+id/customview_layoutparams"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="#1aaaaa"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/customview_anim"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="5dp"
+        android:background="#9bbbbb"/>
+
+    <com.example.myexperiment.FloatingViewTest.CustomView_scroll
+        android:id="@+id/customview_scroll"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:background="#500000"
+        android:visibility="gone"/>
+
+
+    <com.example.myexperiment.FloatingViewTest.CustomView_scroller
+        android:id="@+id/customview_scroller"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        android:background="#7aaa99"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_all"
+        android:title="全部"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/item_product"
+        android:title="产品组"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/item_design"
+        android:title="设计组"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/item_frontend"
+        android:title="前端组"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/item_android"
+        android:title="安卓组"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/item_backend"
+        android:title="后端组"
+        android:visible="true"
+        app:showAsAction="ifRoom|withText"/>
+
+</menu>
